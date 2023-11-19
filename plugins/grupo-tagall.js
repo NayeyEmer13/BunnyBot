@@ -6,13 +6,13 @@ throw false
 }
 let pesan = args.join` `
 let oi = `*Mensaje:* ${pesan}`
-let teks = `*⛊──⛾「 Tag All 」⛾──⛊*\n*│*\n*│➭*  ${oi}\n*│*\n`
+let teks = `*Despierten mrds*\n*│*\n*│➭*  ${oi}\n*│*\n`
 let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
 let mentionedJid = [who]
 let username = conn.getName(who)
 for (let username of participants) {
-teks += `*│➭* @${username.id.split('@')[0]}\n`}
-teks += `*⛊──⛾「 Tag All 」⛾──⛊*`
+teks += `*🩵* @${username.id.split('@')[0]}\n`}
+teks += `*Bot de @baby_.dzn*`
 conn.sendMessage(m.chat, { text: teks, mentions: participants.map(a => a.id) }, )
 
 }
